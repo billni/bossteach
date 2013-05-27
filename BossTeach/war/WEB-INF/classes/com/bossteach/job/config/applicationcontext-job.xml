@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>	   
+			 		<!--  
+				 <ref bean="policySubmitTrigger" />		           						 			     
+			     <ref bean="uploadTransfixFileTrigger" />
+			   
+			     <ref bean="policyStatusFileDownloadTrigger" />				     
+			     <ref bean="analyzeInfoFileTrigger" />	-->
+		    
+			</list> 
+		</property>
+
+	</bean>
+
+	<!-- 
+		<bean name="policySubmitTrigger"
+			class="org.springframework.scheduling.quartz.CronTriggerBean">
+			<property name="jobDetail" ref="policySubmitJobDetail" />
+			<property name="cronExpression" value="0 0/10 * * * ?" />
+
+		</bean>
+				
+		<bean id="policySubmitJobDetail"
+			class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+			<property name="targetObject" ref="policySubmitObject" />
+			<property name="targetMethod" value="doJob" />
+			<property name="concurrent" value="false" />
+		</bean>
+	
+		<bean id="policySubmitObject" class="com.ulic.ults.job.PolicySubmitJob">
+			
+		</bean>
+
+	-->
+		<bean id="taoBaoTransactionService" class="com.bossteach.job.service.impl.TaoBaoTransactionServiceImpl">
+				<property name="entityManagerFactory" ref="entityManagerFactory" />    
+		</bean>
+		
+		<bean id="crawlHongKangInsuranceTransaction" class="com.bossteach.job.taobao.CrawlHongKangInsuranceTransaction">  
+				<property name="taoBaoTransactionService" ref="taoBaoTransactionService" />    
+		</bean>
+</beans>
