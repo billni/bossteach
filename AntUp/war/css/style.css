@@ -11,7 +11,7 @@
 html,body {
 	background-image: -moz-linear-gradient(top, #8fa1ff, #3757fa); /* Firefox */
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff4f02), color-stop(1, #8f2c00)); /* Saf4+, Chrome */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCC99', endColorstr='#CCFF66', GradientType='0'); /* IE*/
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00CC00', endColorstr='#0099FF', GradientType='0'); /* IE*/
 	height:100%;		
 }
 
