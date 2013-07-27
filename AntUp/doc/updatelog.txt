@@ -15,3 +15,12 @@ html,#body {
 	background:#fff;
 	height:100%;	
 }
+------------------------------------------------------20130727
+menu.css
+#menu a span {
+    display:block;
+    padding:30px 33px 37px 0px;
+    white-space:nowrap;
+}
+修改padding:30px 33px 37px 2px; ==> padding:30px 33px 37px 0px; 解决首页菜单有竖线问题
+----------------------------------------------------
