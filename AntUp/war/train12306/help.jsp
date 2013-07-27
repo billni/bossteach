@@ -21,11 +21,5 @@
 				use SSJ (Spring, Struts2, JPA).</li>
 		</ul>
     </div>
-    <div>
-    	<div>统计图表</div>
-    	<div>列表</div>
-    	<div>明细</div>
-    	<div>其他</div>
-    </div>
 </body>
 </html>
